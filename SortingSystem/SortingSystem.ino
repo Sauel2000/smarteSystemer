@@ -9,14 +9,15 @@ class LinearRailSystem {
     Coord coord_at;
 
     LinearRailSystem(Coord coord_initial) {
-      this.coord_at = new Coord(0, 0);
+      this.coord_at.x = coord_initial.x;
+      this.coord_at.y = coord_initial.y;
     };
 
     // Move to another position.
     MoveTo(Coord coord_move_to) {
       // Enable motors to move to position.
-      this.coord_at.x = coord_move_to -> x;
-      this.coord_at.y = coord_move_to -> y; 
+      this.coord_at.x = coord_move_to.x;
+      this.coord_at.y = coord_move_to.y;
     };
   private:
     
