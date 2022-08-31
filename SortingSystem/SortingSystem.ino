@@ -1,3 +1,5 @@
+#include <Stepper.h>
+
 struct Coord {
   int x;
   int y;
@@ -7,17 +9,26 @@ class LinearRailSystem {
   public:
     // The current position of the linear rail system.
     Coord coord_at;
+    bool sensorActive = false;
 
     LinearRailSystem(Coord coord_initial) {
-      this.coord_at.x = coord_initial.x;
-      this.coord_at.y = coord_initial.y;
+      coord_at.x = coord_initial.x;
+      coord_at.y = coord_initial.y;
     };
 
+    void ReturnToInitialPosition() {
+      if (!sensorActive) {
+        // Enable motors. 
+      } else {
+        // Stop motors.
+      }
+    }
+
     // Move to another position.
-    MoveTo(Coord coord_move_to) {
+    void MoveTo(Coord coord_move_to) {
       // Enable motors to move to position.
-      this.coord_at.x = coord_move_to.x;
-      this.coord_at.y = coord_move_to.y;
+      coord_at.x = coord_move_to.x;
+      coord_at.y = coord_move_to.y;
     };
   private:
     
@@ -25,10 +36,14 @@ class LinearRailSystem {
 
 void setup() {
   // put your setup code here, to run once:
-  LinearRailSystem linearRailSystem = new LinearRailSystem(new Coord(0, 0));
+  Coord coord;
+  coord.x = 0;
+  coord.y = 0;
+
+  LinearRailSystem linearRailSystem(coord);
 };
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+  
 };
