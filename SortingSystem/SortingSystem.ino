@@ -1,6 +1,29 @@
+struct Coord {
+  int x;
+  int y;
+}
+
+class LinearRailSystem {
+  public:
+    // The current position of the linear rail system.
+    Coord coord_at;
+
+    LinearRailSystem(Coord coord_initial) {
+      this.coord_at = new Coord(0, 0);
+    }
+
+    // Move to another position.
+    MoveTo(Coord coord_move_to) {
+      // Enable motors to move to position.
+      this.coord_at = coord_move_to;
+    }
+  private:
+    
+}
+
 void setup() {
   // put your setup code here, to run once:
-
+  LinearRailSystem linearRailSystem = new LinearRailSystem(new Coord(0, 0));
 }
 
 void loop() {
