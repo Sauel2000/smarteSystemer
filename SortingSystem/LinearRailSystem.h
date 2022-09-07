@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Coord.h"
 #include "MotorController.h"
 #include "Fetcher.h"

@@ -9,7 +9,8 @@ public:
 
     Stepper stepper;
 
-    MotorController(int pin1, int pin2);
+    MotorController(int pin1, int pin2); //Constructor for Motorcontroller 
 
-    void step(int steps);
+
+    void step(int steps); // Interface method for stepper library
 };
