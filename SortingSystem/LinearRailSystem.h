@@ -20,8 +20,8 @@ class LinearRailSystem {
     void returnToInitialPosition() {
       if (!sensorActive) {
         // Enable motors.
-        motorX.step(-1 * MotorController::stepsPerRevolution * MotorController::stepsInCoords);
-        motorY.step(-1 * MotorController::stepsPerRevolution * MotorController::stepsInCoords);
+        motorX.step(-1 * motorX.getstepsPerRevolution() * motorX.getstepInCoords());
+        motorY.step(-1 * motorY.getstepsPerRevolution() * motorY.getstepInCoords());
       } else {
         // Stop motors.
       }
@@ -30,8 +30,8 @@ class LinearRailSystem {
     // Move to another position.
     void moveTo(int x, int y) {
       // Enable motors to move to position.
-      motorX.step(x * MotorController::stepsPerRevolution * MotorController::stepsInCoords);
-      motorY.step(y * MotorController::stepsPerRevolution * MotorController::stepsInCoords);
+      motorX.step(x * motorX.getstepsPerRevolution() * motorX.getstepInCoords());
+      motorY.step(y * motorY.getstepsPerRevolution() * motorY.getstepInCoords());
 
       coord_at.x = x;
       coord_at.y = y;
