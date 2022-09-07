@@ -1,8 +1,3 @@
-#include <AccelStepper.h>
-#include <MultiStepper.h>
-
-#include <Stepper.h>
- 
 int dirPin = 2;
 int stepPin = 3;
 //int enPin = 8;
