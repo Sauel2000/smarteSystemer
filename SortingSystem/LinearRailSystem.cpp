@@ -7,15 +7,16 @@ void LinearRailSystem::returnToInitialPosition(){
       bool isInitialPositionX = false;
       bool isInitialPositionY = false;
 
-      while (!isInitialPositionX || !isInitialPositionY) {
-        if (!sensorX.isPressed()) {
+      while (isInitialPositionX == false || isInitialPositionY == false) {
+        if (sensorX.isPressed() == false) {
           motorX.step(-1 * motorX.getstepsPerRevolution() * motorX.getstepInCoords());
         } else {
           isInitialPositionX = true;
         }
 
-        if (!sensorY.isPressed()) {
+        if (sensorY.isPressed() == false) {
           motorY.step(-1 * motorY.getstepsPerRevolution() * motorY.getstepInCoords());
+          
         } else {
           isInitialPositionY = true;
         }
