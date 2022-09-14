@@ -1,12 +1,24 @@
+#include <Arduino.h>
 #include "LinearRailSystem.h"
 
 void LinearRailSystem::returnToInitialPosition(){
-      if (!sensorActive) {
-        // Enable motors.
-        motorX.step(-1 * motorX.getstepsPerRevolution() * motorX.getstepInCoords());
-        motorY.step(-1 * motorY.getstepsPerRevolution() * motorY.getstepInCoords());
-      } else {
-        // Stop motors.
+      Serial.println("Returning to initial position.");
+
+      bool isInitialPositionX = false;
+      bool isInitialPositionY = false;
+
+      while (!isInitialPositionX || !isInitialPositionY) {
+        if (!sensorX.isPressed()) {
+          motorX.step(-1 * motorX.getstepsPerRevolution() * motorX.getstepInCoords());
+        } else {
+          isInitialPositionX = true;
+        }
+
+        if (!sensorY.isPressed()) {
+          motorY.step(-1 * motorY.getstepsPerRevolution() * motorY.getstepInCoords());
+        } else {
+          isInitialPositionY = true;
+        }
       }
 }
 
@@ -23,6 +35,6 @@ void LinearRailSystem::moveTo(int x, int y){
 }
 
 void LinearRailSystem::fetch(){
-        Fetcher fetcher;
+      Fetcher fetcher;
       fetcher.fetch();
 }

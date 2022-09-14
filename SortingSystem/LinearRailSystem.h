@@ -1,7 +1,10 @@
 #pragma once
+#include "Arduino.h"
+
 #include "Coord.h"
 #include "MotorController.h"
 #include "Fetcher.h"
+#include "Button.h"
 
 class LinearRailSystem {
   public:
@@ -11,7 +14,12 @@ class LinearRailSystem {
     MotorController motorX;
     MotorController motorY;
 
-    LinearRailSystem(): motorX(2, 3), motorY(4, 5) {
+    Button sensorX;
+    Button sensorY;
+
+    LinearRailSystem(): 
+      motorX(2, 3), motorY(4, 5),
+      sensorX(10), sensorY(11) {
       // Initital coords.
       coord_at.x = 0;
       coord_at.y = 0;
