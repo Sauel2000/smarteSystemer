@@ -10,7 +10,7 @@ bool Button::isPressed() {
     bool isPressed = (digitalRead(pin) == HIGH);
     
     if (isPressed) {
-        //delay(debounceDelay);
+        delay(debounceDelay);
     }
 
     Serial.println(isPressed);
