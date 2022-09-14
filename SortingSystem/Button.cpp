@@ -2,7 +2,7 @@
 #include "Button.h"
 
 Button::Button(int pinNum) {
-    pin = pinNum;
+    this->pin = pinNum;
     pinMode(pin, INPUT);
 }
 

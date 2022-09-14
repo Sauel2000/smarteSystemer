@@ -5,14 +5,17 @@
  * @param pin2
  */
 MotorController::MotorController(int pin1, int pin2): stepper(stepsPerRevolution, pin1, pin2) {
-  stepper.setSpeed(200);    
+      this->stepper.setSpeed(200);    
 }
+
 void MotorController::step(int steps) {
-    stepper.step(steps);
+      this->stepper.step(steps);
 }
+
 const int MotorController::getstepsPerRevolution(){
-      return stepsPerRevolution;
+      return this->stepsPerRevolution;
 }
+
 const int MotorController::getstepInCoords(){
-      return stepsInCoords;
+      return this->stepsInCoords;
 }
