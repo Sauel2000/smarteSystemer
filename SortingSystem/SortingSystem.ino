@@ -9,9 +9,8 @@ void setup() {
   LinearRailSystem linearRailSystem;
   linearRailSystem.returnToInitialPosition();
 
-  // linearRailSystem.moveTo(2, 2);
-  // linearRailSystem.fetch();
-  // MotorController motorController3(8, 9);
+  linearRailSystem.moveTo(2, 2);
+  linearRailSystem.fetch();
 };
 
 void loop() {
