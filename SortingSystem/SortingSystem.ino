@@ -9,8 +9,9 @@ void setup() {
 
   UIController uiController;
 
-   LinearRailSystem linearRailSystem;
-   linearRailSystem.returnToInitialPosition();
+  LinearRailSystem linearRailSystem;
+  linearRailSystem.returnToInitialPosition();
+
 
   linearRailSystem.moveTo(2, 2);
   linearRailSystem.fetch();
