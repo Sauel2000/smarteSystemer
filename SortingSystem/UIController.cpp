@@ -8,7 +8,7 @@ UIController::UIController() {
   lcd.backlight();
   lcd.setCursor(0, 0);
 
-  lcd.print("Sort.it");
+  lcd.print("Sort.it ");
 
   delay(5000);
 
