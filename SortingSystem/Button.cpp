@@ -2,7 +2,7 @@
 #include "Button.h"
 
 Button::Button(int pinNum) {
-    this->pin = pinNum;
+    pin = pinNum;
     pinMode(pin, INPUT);
 }
 
@@ -13,5 +13,7 @@ bool Button::isPressed() {
         delay(debounceDelay);
     }
 
+    Serial.println(isPressed);
+    Serial.println(pin);
     return isPressed;
 }
