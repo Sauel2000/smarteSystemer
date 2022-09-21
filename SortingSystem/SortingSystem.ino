@@ -10,10 +10,14 @@ void setup() {
 
   UIController uiController;
 
+  Coord coord = uiController.getCoord();
+
   LinearRailSystem linearRailSystem;
 
+  uiController.showMessage("Fetching item at", "(" + String(coord.x) + ", " + String(coord.y) + ")");
+
   linearRailSystem.returnToInitialPosition();
-  linearRailSystem.moveTo(2, 2);
+  linearRailSystem.moveTo(coord.x, coord.y);
   linearRailSystem.fetch();
 }
 

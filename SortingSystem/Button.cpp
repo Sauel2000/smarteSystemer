@@ -13,7 +13,5 @@ bool Button::isPressed() {
         delay(debounceDelay);
     }
 
-    Serial.println(isPressed);
-    Serial.println(pin);
     return isPressed;
 }
