@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <Stepper.h>
 
 #include "MotorController.h"
@@ -10,12 +11,11 @@ void setup() {
   UIController uiController;
 
   LinearRailSystem linearRailSystem;
+
   linearRailSystem.returnToInitialPosition();
-
-
   linearRailSystem.moveTo(2, 2);
   linearRailSystem.fetch();
-};
+}
 
 void loop() {
   
