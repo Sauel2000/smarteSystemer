@@ -1,25 +1,18 @@
 
 #include "ClawController.h"
-ClawController::ClawController(int pin)
+ClawController::ClawController()
 {
-    myServo.attach(pin);
-    Serial.println(pin);
-    
+    myServo.attach(servoPinOutput); //Attaching pin to controll output voltage.
 }
 void ClawController::ClawGrab(){
-    while(true){
-    for (pos = 0; pos <= 20; pos += 1) { 
-    Serial.println(pos);
-    myServo.write(pos); 
-    delay(15);                 
+    while(true){                        //Run the grab and reverse for ever for testing.
+    for (int pos = 0; pos <= 180; pos += 1) { //Using loop to controll angle parameter.
+    myServo.write(pos);                 //Use write function to set angle for the motor.
+    delay(10);                          //Delay to controll rotation velocity.
     }
-    
-    for (pos = 20; pos >= 0; pos -= 1) {
-    Serial.println("LOOP");
-    Serial.println(pos);
-    myServo.write(pos);              
-    delay(15);               
+    for (int pos = 180; pos >= 0; pos -= 1) {//Loop to ungrab item
+    myServo.write(pos);                 //Controll angle in reverse
+    delay(10);                          //Delay to controll rotatation veloity in reverse.
     }
-    
     }
 }

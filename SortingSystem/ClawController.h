@@ -1,18 +1,13 @@
 #pragma once
-#include <Servo.h>
-#include <Arduino.h>
+#include <Servo.h> //Included to run functions that are properly setup with the motors properties.
+#include <Arduino.h> //Included to run arudino functions and variables.(Delay,Serialprint,etc)
 class ClawController {
 public:
-Servo myServo;
 
-ClawController(int pin);
-
+ClawController();
 void ClawGrab();
-
-  // create servo object to control a servo
-// twelve servo objects can be created on most boards
-
-int pos = 0;    // variable to store the servo position
   
 private:
+    Servo myServo;  //Creating an servo object to controll.
+    const int servoPinOutput = 7;   //Creating variable for ouptput pin from arduino to motor.
 };
