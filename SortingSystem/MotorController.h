@@ -10,6 +10,6 @@ public:
     const int getstepInCoords();
     void step(int steps); // Interface method for stepper library
     private:
-    const static int stepsPerRevolution = 1600;
-    const static int stepsInCoords = 10;
+    const static int stepsPerRevolution = 1600; // Number of steps per revolution
+    const static int stepsInCoords = 10; // Number of steps in one coordinate
 };

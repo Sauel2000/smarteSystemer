@@ -8,12 +8,12 @@
 
 class UIController {
 public:
-    UIController();
-    void showWelcomeMessage();
-    void showMessage(String line1, String line2);
-    void updateChooseItemStatus(Coord coord);
-    Coord getCoord();
+    UIController(); // Constructor
+    void showWelcomeMessage(); // Show welcome message
+    void showMessage(String line1, String line2); // Show message
+    void updateChooseItemStatus(Coord coord); // Update choose item status
+    Coord getCoord(); // Get coord
 private:
-    LiquidCrystal_I2C lcd;
+    LiquidCrystal_I2C lcd; // Create LCD instance
     Coord coord;
 };
