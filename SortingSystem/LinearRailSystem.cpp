@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "LinearRailSystem.h"
 
-LinearRailSystem::LinearRailSystem(): motorX(2, 3), motorY(4, 5), sensorX(10), sensorY(11) {
+LinearRailSystem::LinearRailSystem(): motorX(2, 3), motorY(4, 5), sensorX(8), sensorY(9) {
   // Initital coords.
   this->coordAt.x = 0;
   this->coordAt.y = 0;

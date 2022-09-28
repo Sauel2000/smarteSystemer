@@ -2,10 +2,10 @@
 #include "Button.h"
 
 UIController::UIController(): lcd(0x27, 16, 2) {
-  lcd.init(); // Initialize the LCD
-  lcd.backlight(); // Turn on the backlight
+  lcd.init();
+  lcd.backlight(); 
 
-  this->showWelcomeMessage(); // Show welcome message
+  this->showWelcomeMessage(); 
 
   Button btnX(10); // Create button instance
   Button btnY(11); // Create button instance

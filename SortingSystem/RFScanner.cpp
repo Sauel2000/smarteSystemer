@@ -35,11 +35,13 @@ Serial.print("UID tag :");
   {
     Serial.println("Authorized access"); //prints authorized access
     Serial.println();
+    access = true;
     delay(3000);
   }
  
  else   {
     Serial.println(" Access denied"); //prints access denied
+    access = false;
     delay(3000);
   }
 }

@@ -1,19 +1,17 @@
 #pragma once
-
 #include <Arduino.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-
 #include "Coord.h"
 
 class UIController {
 public:
-    UIController(); // Constructor
-    void showWelcomeMessage(); // Show welcome message
-    void showMessage(String line1, String line2); // Show message
-    void updateChooseItemStatus(Coord coord); // Update choose item status
-    Coord getCoord(); // Get coord
+    UIController(); 
+    void showWelcomeMessage(); 
+    void showMessage(String line1, String line2);
+    void updateChooseItemStatus(Coord coord); 
+    Coord getCoord(); 
 private:
-    LiquidCrystal_I2C lcd; // Create LCD instance
+    LiquidCrystal_I2C lcd; 
     Coord coord;
 };

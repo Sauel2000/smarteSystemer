@@ -2,6 +2,6 @@
 
 const int Fetcher::getStepsToFetch()
 {
-    return this->stepsToFetch;
+    return this->stepsToFetch; 
 }
 

@@ -13,12 +13,14 @@ void setup() {
   // rfScanner.init(); // Initialize RFID scanner
 
   UIController uiController;
- 
+  
   Coord coord = uiController.getCoord();
 
   LinearRailSystem linearRailSystem;
-
   uiController.showMessage("Fetching item at", "(" + String(coord.x) + ", " + String(coord.y) + ")");
+
+  // ClawController myClaw;
+  // myClaw.ClawGrab();
 
   linearRailSystem.returnToInitialPosition(); // Return to initial position
   linearRailSystem.moveTo(coord.x, coord.y); // Move to the item
