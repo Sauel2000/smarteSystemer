@@ -1,22 +1,31 @@
 #include <Servo.h>
-
-Servo myservo;  // create servo object to control a servo
-// twelve servo objects can be created on most boards
-
-int pos = 0;    // variable to store the servo position
-
+Servo testServo;  
+int pos = 0;
+int sensorValue;
 void setup() {
-  myservo.attach(13);  // attaches the servo on pin 9 to the servo object
+  testServo.attach(A0);  //Using attach method to attach servo to arduino pin
+  Serial.begin(9600);
+
 }
 
 void loop() {
-  for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
+  for (pos = 0; pos <= 180; pos += 1) {// Making loop for the servo to go 15 degrees
     // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(15);                       // waits 15ms for the servo to reach the position
+    testServo.write(pos);              // Using write method to move the servo to position
+    delay(15);
+    sensorValue = analogRead(A1);
+    float voltage = sensorValue * (5.0 / 1023.0);
+    Serial.println(voltage);
   }
-  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(15);                       // waits 15ms for the servo to reach the position
+
+
+  // print out the value you read:
+
+  /*
+  for (pos = 180; pos >= 0; pos -= 1) { // Loop to return from 15 to 0 degrees.
+    testServo.write(pos);                // Use write method to move servo back to 0 degrees.
+    delay(15);                         // Delay to let servo reach its' destination.
   }
+  */
+
 }
