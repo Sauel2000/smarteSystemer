@@ -3,13 +3,15 @@
 #include "MotorController.h"
 #include "LinearRailSystem.h"
 #include "UIController.h"
-#include "RFScanner.h"
+//#include "RFScanner.h"
 
-RFScanner rfScanner; // Create RFID scanner instance
+//RFScanner rfScanner; // Create RFID scanner instance
 
 void setup() {
   Serial.begin(9600);
-  rfScanner.init(); // Initialize RFID scanner
+
+  // rfScanner.init(); // Initialize RFID scanner
+
   UIController uiController;
  
   Coord coord = uiController.getCoord();
@@ -26,5 +28,5 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  rfScanner.scan(); // Scan for RFID tags
+  // rfScanner.scan(); // Scan for RFID tags
 }
