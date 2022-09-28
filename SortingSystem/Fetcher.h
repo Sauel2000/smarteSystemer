@@ -6,7 +6,7 @@ public:
   //Creating object motorZ to move in Zaxis.
   MotorController motorZ;
 
-  Fetcher(): motorZ(8, 9) { // Initialising pins for Z in arduino
+  Fetcher(): motorZ(6, 7) { // Initialising pins for Z in arduino
   }
   const int getStepsToFetch();
 

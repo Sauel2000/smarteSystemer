@@ -14,8 +14,6 @@ void LinearRailSystem::returnToInitialPosition(){
   bool isInitialPositionY = false;
 
   while (isInitialPositionX == false || isInitialPositionY == false) {
-    //Serial.println(this->sensorX.isPressed()); Serial.println("X"); //TESTING
-    //Serial.println(this->sensorY.isPressed()); Serial.println("Y"); //TESTING
     if (this->sensorX.isPressed() == false) {
       this->motorX.step(-1 * this->motorX.getstepsPerRevolution() * this->motorX.getstepInCoords());
       isInitialPositionX = false;      
