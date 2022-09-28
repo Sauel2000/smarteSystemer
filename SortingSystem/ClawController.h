@@ -6,8 +6,9 @@ public:
 
 ClawController();
 void ClawGrab();
-  
+void ClawUngrab();
+
 private:
     Servo myServo;  //Creating an servo object to controll.
-    const int servoPinOutput = 7;   //Creating variable for ouptput pin from arduino to motor.
+    const int servoPinOutput = 22;   //Creating variable for ouptput pin from arduino to motor.
 };
