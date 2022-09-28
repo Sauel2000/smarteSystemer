@@ -1,3 +1,4 @@
+/*
 #pragma once
 #include <deprecated.h>
 #include <MFRC522.h>
@@ -13,3 +14,4 @@ public:
 private:
     MFRC522 mfrc522; // Create MFRC522 instance.
 };
+*/

@@ -1,3 +1,4 @@
+/*
 #include "RFScanner.h"
 
 RFScanner::RFScanner() {
@@ -43,3 +44,4 @@ Serial.print("UID tag :");
   }
 }
 }
+*/
