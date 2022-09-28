@@ -10,6 +10,7 @@ class UIController {
 public:
     UIController();
     void showWelcomeMessage();
+    void playWelcomeTune();
     void showMessage(String line1, String line2);
     void updateChooseItemStatus(Coord coord);
     Coord getCoord();
