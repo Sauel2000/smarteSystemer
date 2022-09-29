@@ -3,6 +3,7 @@
 #include "MotorController.h"
 #include "LinearRailSystem.h"
 #include "UIController.h"
+#include "ClawController.h"
 //#include "RFScanner.h"
 
 //RFScanner rfScanner; // Create RFID scanner instance
@@ -19,13 +20,13 @@ void setup() {
   LinearRailSystem linearRailSystem;
   uiController.showMessage("Fetching item at", "(" + String(coord.x) + ", " + String(coord.y) + ")");
 
-  // ClawController myClaw;
-  // myClaw.ClawGrab();
-
   linearRailSystem.returnToInitialPosition(); // Return to initial position
   linearRailSystem.moveTo(coord.x, coord.y); // Move to the item
   linearRailSystem.fetch(); // Fetch item
 
+  ClawController myClaw;
+  myClaw.ClawGrab();
+  myClaw.ClawUngrab();  
 }
 
 void loop() {
