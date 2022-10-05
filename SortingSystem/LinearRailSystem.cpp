@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "LinearRailSystem.h"
 
-LinearRailSystem::LinearRailSystem(): motorX(2, 3), motorY(4, 5), sensorX(8), sensorY(9) {
+LinearRailSystem::LinearRailSystem(): motorX(2, 3), motorY(4, 5), sensorX(10), sensorY(11) {
   // Initital coords.
   this->coordAt.x = 0;
   this->coordAt.y = 0;
@@ -12,7 +12,6 @@ void LinearRailSystem::returnToInitialPosition(){
 
   bool isInitialPositionX = false;
   bool isInitialPositionY = false;
-
   while (isInitialPositionX == false || isInitialPositionY == false) {
     if (this->sensorX.isPressed() == false) {
       this->motorX.step(-1 * this->motorX.getstepsPerRevolution() * this->motorX.getstepInCoords());

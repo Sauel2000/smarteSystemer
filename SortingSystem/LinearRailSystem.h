@@ -1,7 +1,7 @@
 #pragma once
 #include "Arduino.h"
 #include "Coord.h"
-#include "MotorController.h"
+#include "Controllers/MotorController.h"
 #include "Fetcher.h"
 #include "Button.h"
 

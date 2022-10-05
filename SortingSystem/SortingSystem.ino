@@ -1,9 +1,12 @@
 #include <Arduino.h>
 #include <Stepper.h>
-#include "MotorController.h"
+
+#include "Controllers/ClawController.h"
+#include "Controllers/ItemController.h"
+#include "Controllers/MotorController.h"
+#include "Controllers/UIController.h"
 #include "LinearRailSystem.h"
-#include "UIController.h"
-#include "ClawController.h"
+#include "Item.h"
 //#include "RFScanner.h"
 
 //RFScanner rfScanner; // Create RFID scanner instance
