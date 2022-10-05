@@ -16,6 +16,9 @@ void setup() {
 
   // rfScanner.init(); // Initialize RFID scanner
 
+  ItemController itemController;
+  //itemController.setItem(1, 2, new Item("martinSkrue", 4,coordForItem,1,1));
+
   UIController uiController;
   
   Coord coord = uiController.getCoord();

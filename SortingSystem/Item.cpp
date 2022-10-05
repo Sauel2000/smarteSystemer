@@ -10,3 +10,6 @@ Item::Item(String name, int idNum, Coord itemCord, int width, int height, int le
     this->height = height;
     this->length = lenght;
 }
+Coord Item::getItemCord(){
+    return itemCord;
+}

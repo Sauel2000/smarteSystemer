@@ -7,8 +7,9 @@ public:
     Item(String name, int idNum, Coord itemCord, int width, int height, int lenght);
     void registerNewItem();
     void removeItem();
-private:
+    Coord getItemCord();
     String name;
+private:
     int idNum;
     Coord itemCord;
     int width;
