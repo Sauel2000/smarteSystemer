@@ -1,10 +1,10 @@
 #include <Arduino.h>
 #include <Stepper.h>
 
-#include "Controllers/ClawController.h"
-#include "Controllers/ItemController.h"
-#include "Controllers/MotorController.h"
-#include "Controllers/UIController.h"
+#include "src/controllers/ClawController.h"
+#include "src/controllers/ItemController.h"
+#include "src/controllers/MotorController.h"
+#include "src/controllers/UIController.h"
 #include "LinearRailSystem.h"
 #include "Item.h"
 //#include "RFScanner.h"

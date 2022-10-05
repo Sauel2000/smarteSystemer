@@ -1,5 +1,5 @@
 #include "UIController.h"
-#include "../Button.h"
+#include "../../Button.h"
 
 UIController::UIController(): lcd(0x27, 16, 2) {
   lcd.init();

@@ -3,7 +3,7 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
-#include "../Coord.h"
+#include "../../Coord.h"
 
 class UIController {
 public:

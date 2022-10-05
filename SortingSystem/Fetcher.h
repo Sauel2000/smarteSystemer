@@ -1,5 +1,5 @@
 #pragma once
-#include "Controllers/MotorController.h"
+#include "src/controllers/MotorController.h"
 //Creating object "Fetcher" for z axis
 class Fetcher {
 public:
