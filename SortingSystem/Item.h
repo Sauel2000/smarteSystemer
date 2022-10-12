@@ -4,15 +4,15 @@
 
 class Item {
 public:
-    Item(String name, int idNum, Coord itemCord, int width, int height, int lenght);
+    String name;
+    bool borrowed;
+
+    Item(String name, int width, int lenght);
     void registerNewItem();
     void removeItem();
-    Coord getItemCord();
-    String name;
+    void borrow();
+    void unborrow();
 private:
-    int idNum;
-    Coord itemCord;
     int width;
-    int height;
     int length;
 };

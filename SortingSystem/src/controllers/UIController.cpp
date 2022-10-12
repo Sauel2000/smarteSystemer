@@ -1,7 +1,7 @@
 #include "UIController.h"
 #include "../../Button.h"
 
-UIController::UIController(): lcd(0x27, 16, 2) {
+UIController::UIController(ItemController itemController): lcd(0x27, 16, 2) {
   lcd.init();
   lcd.backlight(); 
 
@@ -14,7 +14,7 @@ UIController::UIController(): lcd(0x27, 16, 2) {
   coord.x = 0;
   coord.y = 0;
 
-  this->updateChooseItemStatus(coord);
+  this->updateChooseItemStatus(coord, itemController);
 
   while (true) {
     if (btnOk.isPressed()) {
@@ -28,7 +28,7 @@ UIController::UIController(): lcd(0x27, 16, 2) {
         coord.x = 0;
       }
 
-      this->updateChooseItemStatus(coord);
+      this->updateChooseItemStatus(coord, itemController);
 
       delay(100);
     } else if (btnY.isPressed()) {
@@ -38,7 +38,7 @@ UIController::UIController(): lcd(0x27, 16, 2) {
         coord.y = 0;
       }
 
-      this->updateChooseItemStatus(coord);
+      this->updateChooseItemStatus(coord, itemController);
 
       delay(100);
     }
@@ -64,18 +64,22 @@ void UIController::showMessage(String line1, String line2) {
   delay(1000);
 }
 
-void UIController::updateChooseItemStatus(Coord coord) {
+void UIController::updateChooseItemStatus(Coord coord, ItemController itemController) {
   lcd.clear();
   lcd.setCursor(0, 0);
 
-  lcd.print("Choose item:");
-
-  lcd.setCursor(0, 1);
-
   char strBuffer[16];
-  sprintf(strBuffer, "at pos (%d, %d)", coord.x, coord.y);
+  sprintf(strBuffer, "Item (%d, %d)", coord.x, coord.y);
 
-  lcd.print(strBuffer);  
+  lcd.print(strBuffer);
+
+  lcd.setCursor(0, 1); 
+
+  Item* item = itemController.getItem(coord.x, coord.y);
+
+  if (item != nullptr) {
+    lcd.print(item->name);
+  }
 }
 
 Coord UIController::getCoord() {

@@ -1,15 +1,17 @@
 #include "Item.h"
 
-
-Item::Item(String name, int idNum, Coord itemCord, int width, int height, int lenght)
+Item::Item(String name, int width, int lenght)
 {
     this->name = name;
-    this->idNum = idNum; 
-    this->itemCord = itemCord;
     this->width = width;
-    this->height = height;
     this->length = lenght;
+    this->borrowed = false;
 }
-Coord Item::getItemCord(){
-    return itemCord;
+
+void Item::borrow() {
+    this->borrowed = true;
+}
+
+void Item::unborrow() {
+    this->borrowed = false;
 }

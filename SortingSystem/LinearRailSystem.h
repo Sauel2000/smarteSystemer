@@ -24,6 +24,6 @@ class LinearRailSystem {
     void moveTo(int x, int y);
 
     // Move in z axis. 
-    void fetch();
+    void fetch(int direction);
   private:
 };

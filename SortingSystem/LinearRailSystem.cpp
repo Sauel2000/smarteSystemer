@@ -40,7 +40,7 @@ void LinearRailSystem::moveTo(int x, int y) {
   this->coordAt.y = y;
 }
 
-void LinearRailSystem::fetch(){
+void LinearRailSystem::fetch(int direction = 1) {
   Fetcher fetcher;
-  fetcher.fetch();
+  fetcher.fetch(direction);
 }
