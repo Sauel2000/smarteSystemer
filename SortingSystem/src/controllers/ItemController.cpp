@@ -1,9 +1,8 @@
 #include <Arduino.h>
-
 #include "../../Coord.h"
 #include "ItemController.h"
 
-ItemController::ItemController() {
+ItemController::ItemController() { // Deafult setting all items to nullptr
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             this->items[i][j] = nullptr;
@@ -11,16 +10,16 @@ ItemController::ItemController() {
     }
 }
 
-void ItemController::setItem(int x, int y, Item* item) {
-    delete this->items[x][y];
-    this->items[x][y] = item;
+void ItemController::setItem(int x, int y, Item* item) { // point the pointer to spesific item in the array with the use of x,y
+    delete this->items[x][y]; 
+    this->items[x][y] = item; 
 }
 
-Item* ItemController::getItem(int x, int y) {
+Item* ItemController::getItem(int x, int y) { // Returns a pointer to the item at the spesific coordinate
     return this->items[x][y];
 }
 
-void ItemController::removeItem(int x, int y) {
+void ItemController::removeItem(int x, int y) { // Deletes the item from the heap and sets the pointer to nullptr
     delete this->items[x][y];
     this->items[x][y] = nullptr;
 }

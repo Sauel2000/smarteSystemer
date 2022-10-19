@@ -5,8 +5,11 @@ class ClawController {
 public:
 
 ClawController();
-void ClawGrab();
-void ClawUngrab();
+/*
+
+*/
+void OpenClaw(); //Function to grab the item
+void CloseClaw(); //Function to ungrab the item
 
 private:
     Servo myServo;  //Creating an servo object to controll.
