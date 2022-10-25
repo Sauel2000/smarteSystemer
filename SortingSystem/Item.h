@@ -12,6 +12,7 @@ public:
     void removeItem();
     void borrow();
     void unborrow();
+    bool isBorrowed();
 private:
     int width;
     int length;

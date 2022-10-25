@@ -15,3 +15,10 @@ void Item::borrow() {
 void Item::unborrow() {
     this->borrowed = false;
 }
+
+bool Item::isBorrowed() {
+    Serial.begin(9600);
+    bool isBorrowed = this->borrowed;
+    Serial.print(isBorrowed);
+    return this->borrowed;
+}
