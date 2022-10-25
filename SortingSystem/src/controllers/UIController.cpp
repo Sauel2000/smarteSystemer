@@ -7,9 +7,9 @@ UIController::UIController(ItemController itemController): lcd(0x27, 16, 2) {
 
   this->showWelcomeMessage(); 
 
-  Button btnX(10); // Create button instance
-  Button btnY(11); // Create button instance
-  Button btnOk(12); // Create button instance
+  Button btnX(10); 
+  Button btnY(11); 
+  Button btnOk(12); 
 
   coord.x = 0;
   coord.y = 0;

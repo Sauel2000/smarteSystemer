@@ -32,7 +32,7 @@ void LinearRailSystem::returnToInitialPosition(){
 }
 
 void LinearRailSystem::moveTo(int x, int y) {
-  // Enable motors to move to position.
+  
   this->motorX.step(x * this->motorX.getstepsPerRevolution() * this->motorX.getstepInCoords());
   this->motorY.step(y * this->motorY.getstepsPerRevolution() * this->motorY.getstepInCoords());
 

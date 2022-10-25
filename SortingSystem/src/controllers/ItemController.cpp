@@ -15,11 +15,11 @@ void ItemController::setItem(int x, int y, Item* item) {
     this->items[x][y] = item; 
 }
 
-Item* ItemController::getItem(int x, int y) { // Returns a pointer to the item at the spesific coordinate
+Item* ItemController::getItem(int x, int y) { 
     return this->items[x][y];
 }
 
-void ItemController::removeItem(int x, int y) { // Deletes the item from the heap and sets the pointer to nullptr
+void ItemController::removeItem(int x, int y) { 
     delete this->items[x][y];
     this->items[x][y] = nullptr;
 }

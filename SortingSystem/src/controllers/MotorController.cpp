@@ -1,9 +1,6 @@
 #include "MotorController.h"
 
-/**
- * @param pin1 
- * @param pin2
- */
+
 MotorController::MotorController(int pin1, int pin2): stepper(stepsPerRevolution, pin1, pin2) { 
       this->stepper.setSpeed(200);    
 }
