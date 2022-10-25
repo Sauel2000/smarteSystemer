@@ -49,13 +49,13 @@ void mainRoutine(ItemController itemController) {
   linearRailSystem.fetch(1); // Fetch item
 
   ClawController myClaw;
-  myClaw.ClawGrab();
+  myClaw.OpenClaw();
 
 
   linearRailSystem.fetch(-1);
   linearRailSystem.returnToInitialPosition();
 
-  myClaw.ClawUngrab();
+  myClaw.CloseClaw();
 
   // Restart main routine.
   mainRoutine(itemController);

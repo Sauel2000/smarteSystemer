@@ -2,7 +2,7 @@
 #include "../../Coord.h"
 #include "ItemController.h"
 
-ItemController::ItemController() { // Deafult setting all items to nullptr
+ItemController::ItemController() { 
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             this->items[i][j] = nullptr;
@@ -10,7 +10,7 @@ ItemController::ItemController() { // Deafult setting all items to nullptr
     }
 }
 
-void ItemController::setItem(int x, int y, Item* item) { // point the pointer to spesific item in the array with the use of x,y
+void ItemController::setItem(int x, int y, Item* item) { 
     delete this->items[x][y]; 
     this->items[x][y] = item; 
 }

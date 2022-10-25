@@ -3,13 +3,23 @@
 #include <Arduino.h> //Included to run arudino functions and variables.(Delay,Serialprint,etc)
 class ClawController {
 public:
-
+/*
+* @desc This method is used to attach the servo to the pin.
+* @param
+* - servoPinOutput: The pin that the servo is attached to.
+*@return void
+*/
 ClawController();
 /*
-
+* @desc This function is used to open the claw by controlling the servo motor.
+* @return void
 */
-void OpenClaw(); //Function to grab the item
-void CloseClaw(); //Function to ungrab the item
+void OpenClaw();
+/*
+* @desc This function is used to close the claw by controlling the servo motor.
+* @return void
+*/
+void CloseClaw();
 
 private:
     Servo myServo;  //Creating an servo object to controll.
