@@ -80,6 +80,10 @@ void UIController::updateChooseItemStatus(Coord coord, ItemController itemContro
   if (item != nullptr) {
     lcd.print(item->name);
   }
+
+  if (item->isBorrowed() == true) { //Martin: I added this if statement to check if the item is borrowed or not
+    lcd.print(" Borrowed ");
+  }
 }
 
 Coord UIController::getCoord() {
