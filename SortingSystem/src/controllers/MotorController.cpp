@@ -2,7 +2,7 @@
 
 
 MotorController::MotorController(int pin1, int pin2): stepper(stepsPerRevolution, pin1, pin2) { 
-      this->stepper.setSpeed(200);    
+      this->stepper.setSpeed(50);    
 }
 
 void MotorController::step(int steps) {
