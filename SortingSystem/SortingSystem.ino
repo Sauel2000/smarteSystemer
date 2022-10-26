@@ -11,12 +11,11 @@
 
 //RFScanner rfScanner; // Create RFID scanner instance
 
-#define TEST_ROUTINE true
+#define TEST_ROUTINE false
 
 void setup() {
   Serial.begin(9600);
 
-  // 
   ItemController itemController;
   itemController.setItem(0, 1, new Item("Star Head", 5, 5));
   itemController.setItem(0, 2, new Item("Flat Head Screw", 5, 5));
