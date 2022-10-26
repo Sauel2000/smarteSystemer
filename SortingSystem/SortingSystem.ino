@@ -11,6 +11,8 @@
 
 //RFScanner rfScanner; // Create RFID scanner instance
 
+#define TEST_ROUTINE true
+
 void setup() {
   Serial.begin(9600);
 
@@ -27,7 +29,11 @@ void setup() {
   itemController.setItem(2, 1, new Item("Sentinel Head", 5, 5));
   itemController.setItem(2, 2, new Item("Philips Head", 5, 5));
 
-  mainRoutine(itemController);
+  if (TEST_ROUTINE == false) {
+    mainRoutine(itemController);
+  } else {
+    testRoutine(itemController);
+  }
 }
 
 void mainRoutine(ItemController itemController) {  
@@ -59,6 +65,22 @@ void mainRoutine(ItemController itemController) {
 
   // Restart main routine.
   mainRoutine(itemController);
+}
+
+void testRoutine(ItemController itemController) {
+  // Test routine
+  LinearRailSystem linearRailSystem;
+  linearRailSystem.returnToInitialPosition(); // Return to initial position
+  linearRailSystem.moveTo(1, 1); // Move to the item
+  linearRailSystem.fetch(1); // Fetch item
+
+  ClawController myClaw;
+  myClaw.OpenClaw();
+
+  linearRailSystem.fetch(-1);
+  linearRailSystem.returnToInitialPosition();
+
+  myClaw.CloseClaw();
 }
 
 void loop() {
