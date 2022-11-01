@@ -1,28 +1,25 @@
-.p1 {
-    color:yellow;
-}
+
 .borrowButton {
     display: inline-block;
     width: 230px;
     height: 200px;
     text-align: center;
     background: #ffffff;
-    background-color: red;
+    background-color:lightgrey;
     color: white;
     border: 1px solid black;
     
 }
 .button-container {
-    background-color: blue;
+    background-color: black;
     color: black;
-    border: 10px solid white;
     margin: 10px 10px;
     padding:10px;
     font-size: 20px;
     
 }
 .searchButton{
-    background-color:red;
+    background-color:lightgrey;
     width: 230px;
     height: 200px;
     text-align: center;
@@ -31,14 +28,19 @@
 }
 
 .registerButton{
-    background-color:red;
+    background-color:lightgrey;
     width: 230px;
     height: 200px;
     text-align: center;
     display: inline-block;
 }
 body{
-    background-color: black;
+    background-image: url('https://scitechdaily.com/images/3D-Printer.gif');
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+
 }
 .h1{
     color:white;
