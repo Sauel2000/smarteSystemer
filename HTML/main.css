@@ -1,42 +1,43 @@
 
 .borrowButton {
-    opacity: 0.5;
+    opacity: 0.9;
     background-color: lightgrey;
     text-align: center;
     text-decoration: none;
     width: 230px;
-    height: 200px;
+    height: 190px;
     cursor: pointer;
     display:inline-block;
     
 }
 .button-container {
     opacity: 1;
-    margin: 10px 10px;
+
     padding:10px;
-    font-size: 20px;
-    
+
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 .searchButton{
-    opacity: 0.5;
+    opacity: 0.9;
     background-color: lightgrey;
     text-align: center;
     text-decoration: none;
     width: 230px;
-    height: 200px;
+    height:190px;
     cursor: pointer;
     display:inline-block;
-    margin: 0px 20px;
+    margin: 1px 1px;
     
 }
 
 .registerButton{
-    opacity: 0.5;
+    opacity: 0.9;
     background-color: lightgrey;
     text-align: center;
     text-decoration:none;
     width: 230px;
-    height: 200px;
+    height:190px;
     cursor: pointer;
     display:inline-block;
 }
@@ -53,4 +54,34 @@ body{
     color:white;
     text-align: center;
     font-size: 40px;
+}
+.aboutUsButton{
+    opacity: 0.9;
+    background-color: lightgrey;
+    text-align: center;
+    text-decoration:none;
+    width: 230px;
+    height:190px;
+    cursor: pointer;
+    display:inline-block;
+}
+.contactUsButton{
+    opacity: 0.9;
+    background-color: lightgrey;
+    text-align: center;
+    text-decoration:none;
+    width: 230px;
+    height:190px;
+    cursor: pointer;
+    display:inline-block;
+}
+.donateUsButton{
+    opacity: 0.9;
+    background-color: lightgrey;
+    text-align: center;
+    text-decoration:none;
+    width: 230px;
+    height:190px;
+    cursor: pointer;
+    display:inline-block;
 }
