@@ -11,7 +11,7 @@
     display: inline-block;
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 30px 10px;
+    padding: 10px 10px;
     text-decoration: none;
   }
   
@@ -22,12 +22,12 @@
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: black;
-    padding: 20px;
+    padding: 10px;
   }
   .button {
-    background-color: #4CAF50;
+    background-color: lightgray;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    color: white;
+    color: black;
     padding: 60px;
     text-align: center;
     text-decoration: none;
@@ -36,10 +36,10 @@
     margin: 4px 2px;
     cursor: pointer;
   }
-  .button:hover {background-color: #3e8e41}
+  .button:hover {background-color: lightgray}
   
   .button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
+    background-color: lightgray;
+    box-shadow: 0 5px gray;
     transform: translateY(4px);
   }
