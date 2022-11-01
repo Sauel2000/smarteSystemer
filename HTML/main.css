@@ -8,7 +8,7 @@
     height: 190px;
     cursor: pointer;
     display:inline-block;
-    
+    line-height: 170px;
 }
 .button-container {
     opacity: 1;
@@ -21,12 +21,16 @@
 .searchButton{
     opacity: 0.9;
     background-color: lightgrey;
-    text-align: center;
-    text-decoration: none;
+    text-align: fixed;
+    border: 0px solid #FFFF00;
+    display: flex;
+    justify-content: center;
+    line-height: 170px;
+    
     width: 230px;
     height:190px;
     cursor: pointer;
-    display:inline-block;
+    
     margin: 1px 1px;
     
 }
@@ -40,6 +44,7 @@
     height:190px;
     cursor: pointer;
     display:inline-block;
+    line-height: 170px;
 }
 body{
     background-image: url('https://scitechdaily.com/images/3D-Printer.gif');
@@ -64,6 +69,7 @@ body{
     height:190px;
     cursor: pointer;
     display:inline-block;
+    line-height: 170px;
 }
 .contactUsButton{
     opacity: 0.9;
@@ -74,6 +80,7 @@ body{
     height:190px;
     cursor: pointer;
     display:inline-block;
+    line-height: 170px;
 }
 .donateUsButton{
     opacity: 0.9;
@@ -84,4 +91,5 @@ body{
     height:190px;
     cursor: pointer;
     display:inline-block;
+    line-height: 170px;
 }
