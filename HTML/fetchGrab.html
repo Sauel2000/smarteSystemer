@@ -17,9 +17,8 @@
 }
 
 #container {
-	width: 500px;
-	height: 375px;
-	border: 10px white solid;
+	width: 5px;
+	height: 10px;
   float : left;
 }
 #videoElement {
@@ -38,7 +37,10 @@
 	<video autoplay="true" id="videoElement">	
 	</video>
 </div>
-
+<div class="grid-container">
+  <a href="#" class="button"> Try again</a>
+  <a href="index.html" class="button">Done</a>
+</div>
 <script>
     var video = document.querySelector("#videoElement");
 
@@ -52,9 +54,5 @@
         });
     }
 </script>
-<div class="grid-container">
-    <a href="#" class="button"> Try again</a>
-    <a href="index.html" class="button">Done</a>
-</div>
 </body>
 </html>
