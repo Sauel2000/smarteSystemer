@@ -3,28 +3,44 @@
 <head>
 <meta charset="utf-8">
 <title>Display Webcam Stream</title>
-<link rel="stylesheet" type="text/css" href="./registerItem.css"/>
+<link rel="stylesheet" type="text/css" href="./fetchGrabMain.css"/>
 <style>
+  body {
+    background-color: black;
+    background-image: url("https://i.pinimg.com/originals/56/17/2d/56172d7059b5a527bce0adca75ff6f18.gif");
+    }
+
+  header {
+  padding: 30px;
+  text-align: left;
+  font-size: 35px;
+  color: white;
+}
+
 #container {
-	margin: 0px auto;
+	margin: 10px 20px;
 	width: 500px;
 	height: 375px;
-	border: 10px #333 solid;
+	border: 10px white solid;
+  float : left;
 }
 #videoElement {
 	width: 500px;
 	height: 375px;
-	background-color: #666;
+	background-color: lightgray;
 }
+
 </style>
 </head>
- 
 <body>
+<header>
+  <h2>Fetching item</h2>
+  <header>
 <div id="container">
-	<video autoplay="true" id="videoElement">
-	
+	<video autoplay="true" id="videoElement">	
 	</video>
 </div>
+
 <script>
     var video = document.querySelector("#videoElement");
 
@@ -38,5 +54,9 @@
         });
     }
 </script>
+<div class="grid-container">
+    <a href="#" class="button"> Try again</a>
+    <a href="index.html" class="button">Done</a>
+</div>
 </body>
 </html>
