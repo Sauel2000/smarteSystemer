@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="78px" viewBox="0 0 76 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ELEMENT/ICON/Wizard/MyUSS</title>
+    <g id="ELEMENT/ICON/Wizard/MyUSS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-6-Copy">
+            <g id="Group-5-Copy-2" fill="#FFFFFF" stroke="#C9CECF" stroke-width="4">
+                <ellipse id="Oval" cx="37.8280545" cy="38.8235296" rx="35.8280545" ry="36.8235296"></ellipse>
+            </g>
+            <g id="account_circle-24px-copy" opacity="0.8" transform="translate(11.000000, 11.000000)">
+                <polygon id="Path" points="0 0 54 0 54 55 0 55"></polygon>
+                <path d="M27,4.58333333 C14.58,4.58333333 4.5,14.85 4.5,27.5 C4.5,40.15 14.58,50.4166667 27,50.4166667 C39.42,50.4166667 49.5,40.15 49.5,27.5 C49.5,14.85 39.42,4.58333333 27,4.58333333 Z M27,11.4583333 C30.735,11.4583333 33.75,14.5291667 33.75,18.3333333 C33.75,22.1375 30.735,25.2083333 27,25.2083333 C23.265,25.2083333 20.25,22.1375 20.25,18.3333333 C20.25,14.5291667 23.265,11.4583333 27,11.4583333 Z M27,44 C21.375,44 16.4025,41.0666667 13.5,36.6208333 C13.5675,32.0604167 22.5,29.5625 27,29.5625 C31.4775,29.5625 40.4325,32.0604167 40.5,36.6208333 C37.5975,41.0666667 32.625,44 27,44 Z" id="Shape" fill="#34454E" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

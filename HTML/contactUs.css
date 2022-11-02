@@ -1,0 +1,40 @@
+.bugsButton {
+    opacity: 0.9;
+    background-color: lightgrey;
+
+
+    width: 690px;
+    height: 360px;
+    cursor: pointer;
+    display:inline-block;
+    line-height: 0px 0px;
+    margin: 10px 210px;
+    width: 690px; 
+    padding: 50px;
+    font-family: 'Lexend Deca', sans-serif; 
+    color:red;  
+    
+}
+.button-container {
+    opacity: 1;
+
+    padding:10px;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+body{
+    background-image: url('contactBack.gif');
+    background-size: cover;
+    height: 100px;
+    padding:0;
+    margin:0;
+
+}
+.h1{
+    
+    color:black;
+    text-align: center;
+    font-size: 40px;
+}
