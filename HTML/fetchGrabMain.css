@@ -1,12 +1,12 @@
 .grid-container {
   display: block;
   background-color: white;
-  width: 300px;
+  width: 30px;
   height: 10px;
   text-align: center;
   line-height: 20px;
   cursor: pointer;
-  margin: 40px 600px;
+  margin: 10px 500px;
 }
 .button {
   background-color: lightgray;
@@ -17,7 +17,7 @@
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  width: 360px;
+  width: 30px;
   display: block;
 }
 .button:hover {background-color: lightgray}
