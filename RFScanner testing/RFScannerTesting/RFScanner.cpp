@@ -39,20 +39,15 @@
           content.toUpperCase(); //makes the string uppercase
         if (content.substring(1) == "67 F2 D5 B5") //change here the UID of the card/cards that you want to give access
         {
-          Serial.println(" Authorized access "); //prints authorized access
+          Serial.println("Authorized access"); //prints authorized access
           access = true;
           setAccess(access);
           delay(3000);
         }
-        else if (content.substring(1) == "2A A2 D8 0C") //change here the UID of the card/cards that you want to give access
-        {
-          Serial.println(" Authorized access "); //prints authorized access
-          access = true;
-          setAccess(access);
-          delay(3000);
-        }
-      else {
+      
+      else   {
           Serial.println(" Access denied"); //prints access denied
+          access = false;
           delay(3000);
         }
       }

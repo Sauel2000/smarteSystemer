@@ -7,7 +7,7 @@
 #include "src/controllers/UIController.h"
 #include "LinearRailSystem.h"
 #include "Item.h"
-//#include "RFScanner.h"
+#include "RFScanner.h"
 
 //RFScanner rfScanner; // Create RFID scanner instance
 
@@ -28,13 +28,24 @@ void setup() {
   itemController.setItem(2, 1, new Item("Sentinel Head", 5, 5));
   itemController.setItem(2, 2, new Item("Philips Head", 5, 5));
 
+  ScanningRutine(itemController);
   if (TEST_ROUTINE == false) {
     mainRoutine(itemController);
   } else {
     testRoutine(itemController);
   }
 }
+void ScanningRutine(ItemController itemController) {
+  RFScanner scanner;
+  scanner.init();
+  scanner.scan();
+  bool result = scanner.getAccess();
+ if (result = true) {
+  mainRoutine(itemController);
+  scanner.setAccess(false);
+ }
 
+}
 void mainRoutine(ItemController itemController) {  
   UIController uiController(itemController);
   
@@ -63,7 +74,7 @@ void mainRoutine(ItemController itemController) {
   myClaw.CloseClaw();
 
   // Restart main routine.
-  mainRoutine(itemController);
+  ScanningRutine(itemController);
 }
 
 void testRoutine(ItemController itemController) {
