@@ -49,6 +49,7 @@ public:
     */
     void removeItem(int x, int y);
 
+    Coord getCoord(int id);
 private:
 
 };

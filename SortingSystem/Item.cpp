@@ -1,7 +1,8 @@
 #include "Item.h"
 
-Item::Item(String name, int width, int lenght)
+Item::Item(int id, String name, int width, int lenght)
 {
+    this->id = id;
     this->name = name;
     this->width = width;
     this->length = lenght;
@@ -21,4 +22,8 @@ bool Item::isBorrowed() {
     bool isBorrowed = this->borrowed;
     Serial.print(isBorrowed);
     return this->borrowed;
+}
+
+int Item::getId() {
+    return this->id;
 }

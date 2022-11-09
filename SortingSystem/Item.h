@@ -7,13 +7,15 @@ public:
     String name;
     bool borrowed;
 
-    Item(String name, int width, int lenght);
+    Item(int id, String name, int width, int lenght);
     void registerNewItem();
     void removeItem();
     void borrow();
     void unborrow();
     bool isBorrowed();
+    int getId();
 private:
     int width;
     int length;
+    int id;
 };
