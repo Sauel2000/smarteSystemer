@@ -35,6 +35,6 @@ public:
     void step(int steps);
     
     private:
-    const static int stepsPerRevolution = 1600; // Number of steps per revolution
-    const static int stepsInCoords = 10; // Number of steps in one coordinate
+    const static int stepsPerRevolution = 1300; // Number of steps per revolution
+    const static int stepsInCoords = 1; // Number of steps in one coordinate
 };
