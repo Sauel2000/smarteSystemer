@@ -34,7 +34,7 @@ void LinearRailSystem::returnToInitialPosition(){
 void LinearRailSystem::moveTo(int x, int y) {
   
   this->motorX.step(x * this->motorX.getstepsPerRevolution() * this->motorX.getstepInCoords());
-  this->motorY.step(y * this->motorY.getstepsPerRevolution() * this->motorY.getstepInCoords());
+  this->motorY.step(y * this->motorY.getstepsPerRevolutionY() * this->motorY.getstepInCoords());
 
   this->coordAt.x = x;
   this->coordAt.y = y;

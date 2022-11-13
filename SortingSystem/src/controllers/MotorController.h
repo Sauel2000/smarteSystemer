@@ -21,6 +21,8 @@ public:
     * @return stepsPerRevolution
     */
     const int getstepsPerRevolution();
+    const int getstepsPerRevolutionY();
+
     
     /*
     * @desc This method is used to get the number of steps in one coordinate.
@@ -36,5 +38,6 @@ public:
     
     private:
     const static int stepsPerRevolution = 1300; // Number of steps per revolution
+    const static int stepsPerRevolutionY = 7680;
     const static int stepsInCoords = 1; // Number of steps in one coordinate
 };

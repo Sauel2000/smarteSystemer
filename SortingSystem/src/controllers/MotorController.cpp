@@ -2,7 +2,7 @@
 
 
 MotorController::MotorController(int pin1, int pin2): stepper(stepsPerRevolution, pin1, pin2) { 
-      this->stepper.setSpeed(50);    
+      this->stepper.setSpeed(200);    
 }
 
 void MotorController::step(int steps) {
@@ -11,6 +11,9 @@ void MotorController::step(int steps) {
 
 const int MotorController::getstepsPerRevolution(){
       return this->stepsPerRevolution;
+}
+const int MotorController::getstepsPerRevolutionY(){
+      return this->stepsPerRevolutionY;
 }
 
 const int MotorController::getstepInCoords(){ 

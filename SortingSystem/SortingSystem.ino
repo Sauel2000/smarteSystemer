@@ -92,16 +92,16 @@ void testRoutine(ItemController itemController) {
 
   Coord coord = itemController.getCoord(item);
 
-  linearRailSystem.moveTo(coord.x, coord.y); // Move to the item
+  linearRailSystem.moveTo(0, coord.y); // Move to the item
   linearRailSystem.fetch(1); // Fetch item
+  testRoutine(itemController);
+  //ClawController myClaw;
+  //myClaw.OpenClaw();
 
-  ClawController myClaw;
-  myClaw.OpenClaw();
-
-  linearRailSystem.fetch(-1);
+  //linearRailSystem.fetch(-1);
   // linearRailSystem.returnToInitialPosition();
 
-  myClaw.CloseClaw();
+  //myClaw.CloseClaw();
 }
 
 void loop() {
