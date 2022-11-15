@@ -8,6 +8,7 @@
 #include "LinearRailSystem.h"
 #include "Item.h"
 #include "RFScanner.h"
+#include "Instruction.h"
 
 //RFScanner rfScanner; // Create RFID scanner instance
 
@@ -84,24 +85,31 @@ void testRoutine(ItemController itemController) {
   
   while (Serial.available() == 0) {}
 
-  String str = Serial.readString();
-  str.trim();
+  Instruction instruction = Instruction(Serial.readString());
 
-  int instruction = String(str[0]).toInt();
-  int item = String(str[1]).toInt();
+  switch (instruction.getInstruction()) {
+    // Fetch item.
+    case 0:
 
-  Coord coord = itemController.getCoord(item);
+      break;
+    // Return item.
+    case 1:
 
-  linearRailSystem.moveTo(0, coord.y); // Move to the item
+      break;
+  }
+
+  Coord coord = itemController.getCoord(instruction.getItem());
+
+  linearRailSystem.moveTo(coord.x, coord.y); // Move to the item
   linearRailSystem.fetch(1); // Fetch item
-  testRoutine(itemController);
-  //ClawController myClaw;
-  //myClaw.OpenClaw();
 
-  //linearRailSystem.fetch(-1);
+  ClawController myClaw;
+  myClaw.OpenClaw();
+
+  linearRailSystem.fetch(-1);
   // linearRailSystem.returnToInitialPosition();
 
-  //myClaw.CloseClaw();
+  myClaw.CloseClaw();
 }
 
 void loop() {
