@@ -10,9 +10,9 @@ ItemController::ItemController() {
     }
 }
 
-void ItemController::setItem(int x, int y, Item* item) { 
-    delete this->items[x][y]; 
-    this->items[x][y] = item; 
+void ItemController::setItem(int x, int y, Item* item) {
+    delete this->items[x][y];
+    this->items[x][y] = item;
 }
 
 Item* ItemController::getItem(int x, int y) { 

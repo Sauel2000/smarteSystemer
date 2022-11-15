@@ -1,8 +1,9 @@
 #include "MotorController.h"
 
 
-MotorController::MotorController(int pin1, int pin2): stepper(stepsPerRevolution, pin1, pin2) { 
-      this->stepper.setSpeed(200);    
+MotorController::MotorController(int pin1, int pin2, int speed): 
+      stepper(stepsPerRevolution, pin1, pin2) { 
+      this->stepper.setSpeed(speed);
 }
 
 void MotorController::step(int steps) {

@@ -15,7 +15,7 @@ public:
     * - pin1: The first pin that the stepper is attached to.
     * - pin2: The second pin that the stepper is attached to.
     */
-    MotorController(int pin1, int pin2);
+    MotorController(int pin1, int pin2, int speed);
     /*
     * @desc This method is used to get the number of steps per revolution.
     * @return stepsPerRevolution

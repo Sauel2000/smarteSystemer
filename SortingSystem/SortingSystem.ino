@@ -14,10 +14,11 @@
 
 #define TEST_ROUTINE true
 
+ItemController itemController;
+
 void setup() {
   Serial.begin(9600);
 
-  ItemController itemController;
   itemController.setItem(0, 1, new Item(1, "Star Head", 5, 5));
   itemController.setItem(0, 2, new Item(2, "Flat Head Screw", 5, 5));
 
@@ -31,23 +32,23 @@ void setup() {
 
   //ScanningRutine(itemController);
   if (TEST_ROUTINE == false) {
-    mainRoutine(itemController);
+    mainRoutine();
   } else {
-    testRoutine(itemController);
+    testRoutine();
   }
 }
-void ScanningRutine(ItemController itemController) {
+void ScanningRutine() {
   RFScanner scanner;
   scanner.init();
   scanner.scan();
   bool result = scanner.getAccess();
  if (result = true) {
-  mainRoutine(itemController);
+  mainRoutine();
   scanner.setAccess(false);
  }
 
 }
-void mainRoutine(ItemController itemController) {  
+void mainRoutine() {  
   UIController uiController(itemController);
   
   Coord coord = uiController.getCoord();
@@ -75,10 +76,33 @@ void mainRoutine(ItemController itemController) {
   myClaw.CloseClaw();
 
   // Restart main routine.
-  ScanningRutine(itemController);
+  ScanningRutine();
 }
 
-void testRoutine(ItemController itemController) {
+void routineFetchItem(Coord coord, Instruction instruction, LinearRailSystem linearRailSystem) {
+    coord = itemController.getCoord(instruction.getItem());
+    linearRailSystem.moveTo(coord.x, coord.y);
+    //linearRailSystem.fetch(1);
+
+    //ClawController myClaw;
+    //myClaw.OpenClaw();
+
+    //linearRailSystem.fetch(-1);
+
+    //myClaw.CloseClaw();
+
+    linearRailSystem.returnToInitialPositionCoord(coord);
+
+    itemController.getItem(coord.x, coord.y)->borrow();
+
+    routineFetchItem(coord, instruction, linearRailSystem);
+}
+
+void routineReturnItem(int item, Coord coord) {
+
+}
+
+void testRoutine() {
   // Test routine
   LinearRailSystem linearRailSystem;
   //linearRailSystem.returnToInitialPosition(); // Return to initial position
@@ -87,29 +111,20 @@ void testRoutine(ItemController itemController) {
 
   Instruction instruction = Instruction(Serial.readString());
 
+  Coord coord;
+
   switch (instruction.getInstruction()) {
     // Fetch item.
     case 0:
-
+      routineFetchItem(coord, instruction, linearRailSystem);
       break;
     // Return item.
     case 1:
-
+      
       break;
   }
 
-  Coord coord = itemController.getCoord(instruction.getItem());
-
-  linearRailSystem.moveTo(coord.x, coord.y); // Move to the item
-  linearRailSystem.fetch(1); // Fetch item
-
-  ClawController myClaw;
-  myClaw.OpenClaw();
-
-  linearRailSystem.fetch(-1);
-  // linearRailSystem.returnToInitialPosition();
-
-  myClaw.CloseClaw();
+  testRoutine();
 }
 
 void loop() {

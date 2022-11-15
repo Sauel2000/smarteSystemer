@@ -1,13 +1,13 @@
 #include <Arduino.h>
 #include "LinearRailSystem.h"
 
-LinearRailSystem::LinearRailSystem(): motorX(2, 3), motorY(4, 5), sensorX(8), sensorY(9) {
+LinearRailSystem::LinearRailSystem(): motorX(2, 3, 30), motorY(4, 5, 200), sensorX(8), sensorY(9) {
   // Initital coords.
   this->coordAt.x = 0;
   this->coordAt.y = 0;
 }
 
-void LinearRailSystem::returnToInitialPosition(){
+void LinearRailSystem::returnToInitialPosition() {
   Serial.println("Returning to initial position.");
 
   bool isInitialPositionX = false;
@@ -29,6 +29,11 @@ void LinearRailSystem::returnToInitialPosition(){
 
     delay(10);
   }
+}
+
+void LinearRailSystem::returnToInitialPositionCoord(Coord coord) {
+  this->motorX.step(-1 * this->motorX.getstepsPerRevolution() * this->motorX.getstepInCoords() * coord.x);
+  this->motorY.step(-1 * this->motorY.getstepsPerRevolutionY() * this->motorY.getstepInCoords() * coord.y);
 }
 
 void LinearRailSystem::moveTo(int x, int y) {

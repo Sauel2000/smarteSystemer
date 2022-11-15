@@ -19,6 +19,7 @@ class LinearRailSystem {
     LinearRailSystem();
 
     void returnToInitialPosition();
+    void returnToInitialPositionCoord(Coord coord);
 
     // Move to another position.
     void moveTo(int x, int y);
