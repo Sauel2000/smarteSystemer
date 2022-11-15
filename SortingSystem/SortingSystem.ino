@@ -80,22 +80,28 @@ void mainRoutine() {
 }
 
 void routineFetchItem(Coord coord, Instruction instruction, LinearRailSystem linearRailSystem) {
-    coord = itemController.getCoord(instruction.getItem());
+    coord = itemController.getCoord(instruction.getItem()); // FETHCHER UPWARDS
     linearRailSystem.moveTo(coord.x, coord.y);
-    //linearRailSystem.fetch(1);
+    
 
-    //ClawController myClaw;
-    //myClaw.OpenClaw();
+    ClawController myClaw;
+    myClaw.OpenClaw();
 
-    //linearRailSystem.fetch(-1);
-
-    //myClaw.CloseClaw();
-
+    linearRailSystem.fetch(-1); //FETHCER DOWN
+    
+    myClaw.CloseClaw();
+    linearRailSystem.fetch(1); //FETHCER
     linearRailSystem.returnToInitialPositionCoord(coord);
+    
+    linearRailSystem.fetch(-1); 
+    myClaw.OpenClaw(); 
+    linearRailSystem.fetch(1);
+    delay(2000);
+    myClaw.CloseClaw();
 
-    itemController.getItem(coord.x, coord.y)->borrow();
+     //itemController.getItem(coord.x, coord.y)->borrow();
 
-    routineFetchItem(coord, instruction, linearRailSystem);
+    //routineFetchItem(coord, instruction, linearRailSystem);
 }
 
 void routineReturnItem(int item, Coord coord) {
@@ -116,7 +122,7 @@ void testRoutine() {
   switch (instruction.getInstruction()) {
     // Fetch item.
     case 0:
-      routineFetchItem(coord, instruction, linearRailSystem);
+    routineFetchItem(coord, instruction, linearRailSystem);
       break;
     // Return item.
     case 1:
@@ -124,7 +130,7 @@ void testRoutine() {
       break;
   }
 
-  testRoutine();
+   testRoutine();
 }
 
 void loop() {

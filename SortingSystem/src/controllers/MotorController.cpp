@@ -16,6 +16,9 @@ const int MotorController::getstepsPerRevolution(){
 const int MotorController::getstepsPerRevolutionY(){
       return this->stepsPerRevolutionY;
 }
+const int MotorController::getstepsPerRevolutionZ(){
+      return this->stepsPerRevolutionZ;
+}
 
 const int MotorController::getstepInCoords(){ 
       return this->stepsInCoords;

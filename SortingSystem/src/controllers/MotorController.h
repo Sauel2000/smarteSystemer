@@ -22,6 +22,7 @@ public:
     */
     const int getstepsPerRevolution();
     const int getstepsPerRevolutionY();
+    const int getstepsPerRevolutionZ();
 
     
     /*
@@ -38,6 +39,7 @@ public:
     
     private:
     const static int stepsPerRevolution = 1300; // Number of steps per revolution
-    const static int stepsPerRevolutionY = 7680;
+    const static int stepsPerRevolutionY = 7500;
+    const static int stepsPerRevolutionZ= 940;
     const static int stepsInCoords = 1; // Number of steps in one coordinate
 };

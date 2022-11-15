@@ -11,8 +11,8 @@ public:
   const int getStepsToFetch();
 
   void fetch(int direction) {
-    motorZ.step(direction * motorZ.getstepsPerRevolution() * getStepsToFetch());
+    motorZ.step(direction * motorZ.getstepsPerRevolutionZ());
   }
 private:
-  const static int stepsToFetch = 5; //Temporary 5 rounds of 360* to reach one box down
+  const static int stepsToFetch = 1; //Temporary 5 rounds of 360* to reach one box down
 };
