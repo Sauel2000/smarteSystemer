@@ -29,6 +29,7 @@ void setup() {
   itemController.setItem(2, 0, new Item(6, "2 Hole Head", 5, 5));
   itemController.setItem(2, 1, new Item(7, "Sentinel Head", 5, 5));
   itemController.setItem(2, 2, new Item(8, "Philips Head", 5, 5));
+  LinearRailSystem linearRailSystem;
 
   //ScanningRutine(itemController);
   if (TEST_ROUTINE == false) {
@@ -80,7 +81,8 @@ void mainRoutine() {
 }
 
 void routineFetchItem(Coord coord, Instruction instruction, LinearRailSystem linearRailSystem) {
-    coord = itemController.getCoord(instruction.getItem()); // FETHCHER UPWARDS
+    coord = itemController.getCoord(instruction.getItem()); 
+    linearRailSystem.fetch(1); // Fetch upwards
     linearRailSystem.moveTo(coord.x, coord.y);
     
 
@@ -90,16 +92,14 @@ void routineFetchItem(Coord coord, Instruction instruction, LinearRailSystem lin
     linearRailSystem.fetch(-1); //FETHCER DOWN
     
     myClaw.CloseClaw();
+    
     linearRailSystem.fetch(1); //FETHCER
     linearRailSystem.returnToInitialPositionCoord(coord);
     
     linearRailSystem.fetch(-1); 
     myClaw.OpenClaw(); 
-    linearRailSystem.fetch(1);
-    delay(2000);
-    myClaw.CloseClaw();
-
-     //itemController.getItem(coord.x, coord.y)->borrow();
+    
+     //itemController.getItem(coord.x, coord.y)->borrow();P
 
     //routineFetchItem(coord, instruction, linearRailSystem);
 }

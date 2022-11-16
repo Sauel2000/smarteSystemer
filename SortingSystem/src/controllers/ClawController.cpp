@@ -6,14 +6,14 @@ ClawController::ClawController()
 }
 void ClawController::OpenClaw(){
                                         
-    for (int pos = 0; pos <= 100; pos += 1) { 
+    for (int pos = 0; pos <= 150; pos += 1) { 
     myServo.write(pos);                    
     delay(5);                              
     }
 }
 
 void ClawController::CloseClaw(){
-    for (int pos = 100; pos >= 0; pos -= 1) {
+    for (int pos = 150; pos >= 0; pos -= 1) {
     myServo.write(pos);                 
     delay(5);                          
     }
