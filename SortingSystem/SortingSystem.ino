@@ -98,13 +98,26 @@ void routineFetchItem(Coord coord, Instruction instruction, LinearRailSystem lin
     linearRailSystem.fetch(-1); 
     myClaw.OpenClaw();
     
-     //itemController.getItem(coord.x, coord.y)->borrow();P
+    itemController.getItem(coord.x, coord.y)->borrow();
 
     // routineFetchItem(coord, instruction, linearRailSystem);
 }
 
-void routineReturnItem(int item, Coord coord) {
-
+void routineReturnItem(Coord coord, Instruction instruction, LinearRailSystem linearRailSystem) {
+    coord = itemController.getCoord(instruction.getItem());
+    ClawController myClaw;
+    myClaw.CloseClaw();
+    
+    linearRailSystem.fetch(-1); //FETHCER DOWN
+    linearRailSystem.returnToInitialPositionCoord(coord);
+    
+    myClaw.OpenClaw();
+    linearRailSystem.fetch(-1); //FETHCER DOWN
+    
+     linearRailSystem.moveTo(coord.x, coord.y);
+    
+    linearRailSystem.fetch(-1); 
+    itemController.getItem(coord.x, coord.y)->unborrow();
 }
 
 void testRoutine() {
@@ -125,7 +138,7 @@ void testRoutine() {
       break;
     // Return item.
     case 1:
-      
+    routineReturnItem(coord, instruction,linearRailSystem);
       break;
   }
 
