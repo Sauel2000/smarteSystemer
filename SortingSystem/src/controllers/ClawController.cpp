@@ -4,17 +4,13 @@ ClawController::ClawController()
 {
     myServo.attach(servoPinOutput); 
 }
-void ClawController::OpenClaw(){
-                                        
-    for (int pos = 0; pos <= 150; pos += 1) { 
-    myServo.write(pos);                    
-    delay(5);                              
-    }
+
+void ClawController::OpenClaw() {
+    myServo.write(maxAngle);
+    delay(delayTime);
 }
 
-void ClawController::CloseClaw(){
-    for (int pos = 150; pos >= 0; pos -= 1) {
-    myServo.write(pos);                 
-    delay(5);                          
-    }
+void ClawController::CloseClaw() {
+    myServo.write(0);
+    delay(delayTime);
 }
