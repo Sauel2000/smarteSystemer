@@ -10,7 +10,7 @@ public:
     /*
     * Pointer in 2D array that holds the items in the system.
     */
-    Item* items[3][3]; // Pointer 2D array that holds the items
+    Item* items[4][4]; // Pointer 2D array that holds the items
     
     /*
     * @desc This method is used to get an item at a specific coordinate.

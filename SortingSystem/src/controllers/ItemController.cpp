@@ -3,8 +3,8 @@
 #include "ItemController.h"
 
 ItemController::ItemController() { 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
             this->items[i][j] = nullptr;
         }
     }
@@ -25,8 +25,8 @@ void ItemController::removeItem(int x, int y) {
 }
 
 Coord ItemController::getCoord(int id) {
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
             if (this->items[i][j] != nullptr && this->items[i][j]->getId() == id) {
                 Coord coord;
                 coord.x = i;

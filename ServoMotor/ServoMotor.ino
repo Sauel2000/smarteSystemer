@@ -9,18 +9,18 @@ void setup() {
 }
 
 void loop() {
-      /*
-        for (int pos = 180; pos >= 0; pos -= 1) {
-    testServo.write(pos);                 
+      
+        //for (int pos = 180; pos >= 0; pos -= 1) {
+    testServo.write(150);                 
     delay(5);   
-        }
+        //}
      //   delay(10000);
-  */
-    for (int pos = 0; pos <= 50; pos += 1) { 
-    testServo.write(pos);                    
+  
+    //for (int pos = 0; pos <= 50; pos += 1) { 
+    testServo.write(180);                    
     delay(5);                              
-    }
-    delay(1000);
+    //}
+    
     
 
 

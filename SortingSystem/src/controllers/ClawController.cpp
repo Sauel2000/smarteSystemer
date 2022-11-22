@@ -11,6 +11,6 @@ void ClawController::OpenClaw() {
 }
 
 void ClawController::CloseClaw() {
-    myServo.write(0);
+    myServo.write(100);
     delay(delayTime);
 }

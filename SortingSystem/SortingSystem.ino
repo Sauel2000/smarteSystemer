@@ -21,14 +21,16 @@ void setup() {
 
   itemController.setItem(0, 1, new Item(1, "Star Head", 5, 5));
   itemController.setItem(0, 2, new Item(2, "Flat Head Screw", 5, 5));
+  itemController.setItem(0, 3, new Item(3, "Flange Range", 5, 5));
 
-  itemController.setItem(1, 0, new Item(3, "Flange Range", 5, 5));
   itemController.setItem(1, 1, new Item(4, "Bugle Head", 5, 5));
   itemController.setItem(1, 2, new Item(5, "Raise Head", 5, 5));
+  itemController.setItem(1, 3, new Item(6, "2 Hole Head", 5, 5));
 
-  itemController.setItem(2, 0, new Item(6, "2 Hole Head", 5, 5));
   itemController.setItem(2, 1, new Item(7, "Sentinel Head", 5, 5));
   itemController.setItem(2, 2, new Item(8, "Philips Head", 5, 5));
+  itemController.setItem(2, 3, new Item(9, "Philips Head", 5, 5));
+
   LinearRailSystem linearRailSystem;
 
   //ScanningRutine(itemController);
@@ -108,16 +110,15 @@ void routineReturnItem(Coord coord, Instruction instruction, LinearRailSystem li
     ClawController myClaw;
     myClaw.CloseClaw();
     
+    linearRailSystem.fetch(1); //FETHCER upwards
+    linearRailSystem.moveTo(coord.x, coord.y);
     linearRailSystem.fetch(-1); //FETHCER DOWN
-    linearRailSystem.returnToInitialPositionCoord(coord);
-    
     myClaw.OpenClaw();
-    linearRailSystem.fetch(-1); //FETHCER DOWN
-    
-     linearRailSystem.moveTo(coord.x, coord.y);
-    
-    linearRailSystem.fetch(-1); 
+
+    linearRailSystem.fetch(1); 
     itemController.getItem(coord.x, coord.y)->unborrow();
+    linearRailSystem.returnToInitialPositionCoord(coord);
+    linearRailSystem.fetch(-1);
 }
 
 void testRoutine() {
