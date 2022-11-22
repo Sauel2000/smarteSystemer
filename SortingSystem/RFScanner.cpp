@@ -3,7 +3,7 @@
       #include <Arduino.h>
 
       RFScanner::RFScanner() {
-          mfrc522 = MFRC522(53, 5); // Create MFRC522 instance.
+          mfrc522 = MFRC522(53, 8); // Create MFRC522 instance.
       }
 
       void RFScanner :: init() {
@@ -19,6 +19,7 @@
       }
       void RFScanner::scan() {
       bool access = getAccess();
+      Serial.println("B4 WHILE");
       while (access == false) {
           if ( ! mfrc522.PICC_IsNewCardPresent()) { // If a new card present
 

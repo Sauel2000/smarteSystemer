@@ -10,7 +10,7 @@
 #include "RFScanner.h"
 #include "Instruction.h"
 
-//RFScanner rfScanner; // Create RFID scanner instance
+RFScanner rfScanner; // Create RFID scanner instance
 
 #define TEST_ROUTINE true
 
@@ -46,7 +46,7 @@ void ScanningRutine() {
   scanner.scan();
   bool result = scanner.getAccess();
  if (result = true) {
-  mainRoutine();
+  //mainRoutine();
   scanner.setAccess(false);
  }
 
@@ -123,6 +123,9 @@ void routineReturnItem(Coord coord, Instruction instruction, LinearRailSystem li
 
 void testRoutine() {
   // Test routine
+  Serial.println("FØR RUTINE");
+  ScanningRutine();
+  Serial.println("Routine");
   LinearRailSystem linearRailSystem;
   //linearRailSystem.returnToInitialPosition(); // Return to initial position
   

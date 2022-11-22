@@ -8,7 +8,7 @@
 
 class RFScanner {
 public:
-    RFScanner(); // Constructor, i use pins 53, 6 for the RFID scanner
+    RFScanner(); // Constructor, i use pins 53, 8 for the RFID scanner
     void init(); // Initialize the RFID scanner
     void scan(); // Scan for RFID tags
     bool getAccess(); // Get the access status
