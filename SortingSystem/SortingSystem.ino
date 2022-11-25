@@ -123,9 +123,9 @@ void routineReturnItem(Coord coord, Instruction instruction, LinearRailSystem li
 
 void testRoutine() {
   // Test routine
-  Serial.println("FØR RUTINE");
+
   ScanningRutine();
-  Serial.println("Routine");
+
   LinearRailSystem linearRailSystem;
   //linearRailSystem.returnToInitialPosition(); // Return to initial position
   

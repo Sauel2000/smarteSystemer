@@ -1,5 +1,4 @@
       #include "RFScanner.h"
-      //#include "RFScannerTesting.ino"
       #include <Arduino.h>
 
       RFScanner::RFScanner() {
