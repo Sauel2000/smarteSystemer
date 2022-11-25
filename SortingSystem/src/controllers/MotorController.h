@@ -14,6 +14,7 @@ public:
     * @param
     * - pin1: The first pin that the stepper is attached to.
     * - pin2: The second pin that the stepper is attached to.
+    * -Usually the stepper motor requres 4 cables but can be reduced to two because of bipolarity.
     */
     MotorController(int pin1, int pin2, int speed);
     /*

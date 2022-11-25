@@ -3,7 +3,12 @@
 
 MotorController::MotorController(int pin1, int pin2, int speed): 
       stepper(stepsPerRevolution, pin1, pin2) { 
-      this->stepper.setSpeed(speed);
+      this->stepper.setSpeed(speed); //Speed and steps does impact each other
+      /*
+      The longer the distance the more speed is applied and could overrun if speed and distance are high
+      
+      */
+
 }
 
 void MotorController::step(int steps) {
