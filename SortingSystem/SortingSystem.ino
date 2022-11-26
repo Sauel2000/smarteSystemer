@@ -19,17 +19,17 @@ ItemController itemController;
 void setup() {
   Serial.begin(9600);
 
-  itemController.setItem(0, 1, new Item(1, "Star Head", 5, 5));
-  itemController.setItem(0, 2, new Item(2, "Flat Head Screw", 5, 5));
-  itemController.setItem(0, 3, new Item(3, "Flange Range", 5, 5));
+  itemController.setItem(0, 1, new Item(1, "Red lego", 5, 5));
+  itemController.setItem(0, 2, new Item(2, "Green lego", 5, 5));
+  itemController.setItem(0, 3, new Item(3, "Lego", 5, 5));
 
-  itemController.setItem(1, 1, new Item(4, "Bugle Head", 5, 5));
-  itemController.setItem(1, 2, new Item(5, "Raise Head", 5, 5));
-  itemController.setItem(1, 3, new Item(6, "2 Hole Head", 5, 5));
+  itemController.setItem(1, 1, new Item(4, "Lego", 5, 5));
+  itemController.setItem(1, 2, new Item(5, "Lego", 5, 5));
+  itemController.setItem(1, 3, new Item(6, "Lego", 5, 5));
 
-  itemController.setItem(2, 1, new Item(7, "Sentinel Head", 5, 5));
-  itemController.setItem(2, 2, new Item(8, "Philips Head", 5, 5));
-  itemController.setItem(2, 3, new Item(9, "Philips Head", 5, 5));
+  itemController.setItem(2, 1, new Item(7, "Lego", 5, 5));
+  itemController.setItem(2, 2, new Item(8, "Lego", 5, 5));
+  itemController.setItem(2, 3, new Item(9, "Lego", 5, 5));
 
   LinearRailSystem linearRailSystem;
 

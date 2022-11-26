@@ -8,11 +8,18 @@ ItemController::ItemController() {
             this->items[i][j] = nullptr;
         }
     }
+    /**
+     * ItemController should not be larger than 3x3
+     * Array objects are pointers to items.
+    */
 }
 
 void ItemController::setItem(int x, int y, Item* item) {
     delete this->items[x][y];
     this->items[x][y] = item;
+    /**
+     * @param x position cord, y position cord, Item pointer for array.
+    */
 }
 
 Item* ItemController::getItem(int x, int y) { 
@@ -22,6 +29,7 @@ Item* ItemController::getItem(int x, int y) {
 void ItemController::removeItem(int x, int y) { 
     delete this->items[x][y];
     this->items[x][y] = nullptr;
+
 }
 
 Coord ItemController::getCoord(int id) {
@@ -33,6 +41,10 @@ Coord ItemController::getCoord(int id) {
                 coord.y = j;
 
                 return coord;
+                /**
+                 * @param unique id of the item
+                 * Check if the array place is empty and use the unique id to find correct item
+                */
             }
         }
     }
