@@ -1,5 +1,5 @@
 #pragma once
-#include <Servo.h> //Included to run functions that are properly setup with the motors properties.
+#include <Servo.h> //Included library to handle servo motor with pulse modulation.
 #include <Arduino.h> //Included to run arudino functions and variables.(Delay,Serialprint,etc)
 class ClawController {
 public:
