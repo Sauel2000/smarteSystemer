@@ -12,8 +12,6 @@
 
 RFScanner rfScanner; // Create RFID scanner instance
 
-#define TEST_ROUTINE true
-
 ItemController itemController;
 
 void setup() {
@@ -33,53 +31,19 @@ void setup() {
 
   LinearRailSystem linearRailSystem;
 
-  //ScanningRutine(itemController);
-  if (TEST_ROUTINE == false) {
-    mainRoutine();
-  } else {
-    testRoutine();
-  }
+  mainRoutine();
 }
+
 void ScanningRutine() {
   RFScanner scanner;
   scanner.init();
   scanner.scan();
+
   bool result = scanner.getAccess();
- if (result = true) {
-  //mainRoutine();
-  scanner.setAccess(false);
- }
 
-}
-void mainRoutine() {  
-  UIController uiController(itemController);
-  
-  Coord coord = uiController.getCoord();
-
-  uiController.showMessage("Fetching item at", "(" + String(coord.x) + ", " + String(coord.y) + ")");
-
-  LinearRailSystem linearRailSystem;
-  linearRailSystem.returnToInitialPosition(); // Return to initial position
-
-  Item* fetchedItem = itemController.getItem(coord.x, coord.y);
-  fetchedItem->borrow();
-
-  // itemController.removeItem(coord.x, coord.y);
-
-  linearRailSystem.moveTo(coord.x, coord.y); // Move to the item
-  linearRailSystem.fetch(1); // Fetch item
-
-  ClawController myClaw;
-  myClaw.OpenClaw();
-
-
-  linearRailSystem.fetch(-1);
-  linearRailSystem.returnToInitialPosition();
-
-  myClaw.CloseClaw();
-
-  // Restart main routine.
-  ScanningRutine();
+  if (result = true) {
+    scanner.setAccess(false);
+  }
 }
 
 void routineFetchItem(Coord coord, Instruction instruction, LinearRailSystem linearRailSystem) {
@@ -121,9 +85,7 @@ void routineReturnItem(Coord coord, Instruction instruction, LinearRailSystem li
     linearRailSystem.fetch(-1);
 }
 
-void testRoutine() {
-  // Test routine
-
+void mainRoutine() {
   ScanningRutine();
 
   LinearRailSystem linearRailSystem;
@@ -145,8 +107,6 @@ void testRoutine() {
     routineReturnItem(coord, instruction,linearRailSystem);
       break;
   }
-
-   testRoutine();
 }
 
 void loop() {
