@@ -21,13 +21,26 @@ public:
     * - pin2: The second pin that the stepper is attached to.
     * -Usually the stepper motor requres 4 cables but can be reduced to two because of bipolarity.
     */
+
     MotorController(int pin1, int pin2, int speed);
     /*
-    * @desc This method is used to get the number of steps per revolution.
+    * @desc This method is used to get the number of steps per revolution in the x axis.
     * @return stepsPerRevolution
     */
     const int getstepsPerRevolution();
+
+    /**
+     * @brief This method is used to get the number of steps per revolution in the y axis.
+     * 
+     * @return const int 
+     */
     const int getstepsPerRevolutionY();
+
+    /**
+     * @brief This method is used to get the number of steps per revolution in the z axis.
+     * 
+     * @return const int 
+     */
     const int getstepsPerRevolutionZ();
 
     
@@ -45,7 +58,7 @@ public:
     
     private:
     const static int stepsPerRevolution = 940; // Number of steps per revolution
-    const static int stepsPerRevolutionY = 4500;
-    const static int stepsPerRevolutionZ= 940;
+    const static int stepsPerRevolutionY = 4500; // Number of steps per revolution in the y axis
+    const static int stepsPerRevolutionZ = 940; // Number of steps per revolution in the z axis
     const static int stepsInCoords = 1; // Number of steps in one coordinate
 };

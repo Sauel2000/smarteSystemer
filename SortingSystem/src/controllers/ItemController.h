@@ -49,6 +49,12 @@ public:
     */
     void removeItem(int x, int y);
 
+    /**
+     * @brief Get the Coord object of the item.
+     * 
+     * @param id 
+     * @return Coord 
+     */
     Coord getCoord(int id);
 private:
 
