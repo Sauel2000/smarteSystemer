@@ -1,0 +1,21 @@
+{
+  "name": "sort.it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w serialport"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.2.1",
+    "electron-rebuild": "^3.2.9"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^10.3.0",
+    "onoff": "^6.0.3",
+    "serialport": "^10.4.0"
+  }
+}

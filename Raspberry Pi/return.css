@@ -1,0 +1,40 @@
+body {
+  background-color: black;
+  background-image: url("https://i.pinimg.com/originals/56/17/2d/56172d7059b5a527bce0adca75ff6f18.gif");
+  }
+
+header {
+text-align: left;
+font-size: 20px;
+color: white;
+}
+
+
+.grid-container {
+  display: block;
+  background-color: black;
+  width: 20px;
+  height: 10px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  margin: 0px 510px;
+}
+.button {
+  background-color: lightgray;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  color: black;
+  padding: 30px 60px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+}
+.button:hover {background-color: lightgray}
+
+.button:active {
+  background-color: lightgray;
+  box-shadow: 0 5px lightgray;
+  transform: translateY(4px);
+}

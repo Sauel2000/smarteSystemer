@@ -1,0 +1,99 @@
+.borrowButton {
+    opacity: 0.9;
+    background-color: lightgrey;
+    text-align: center;
+    text-decoration: none;
+    width: 230px;
+    height: 180px;
+    cursor: pointer;
+    display:inline-block;
+    line-height: 170px;
+    margin: 10px;
+    
+}
+.button-container {
+    opacity: 1;
+
+    padding:10px;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.searchButton{
+    opacity: 0.9;
+    background-color: lightgrey;
+    text-align: fixed;
+
+    display: flex;
+    justify-content: center;
+    line-height: 170px;
+    width: 230px;
+    height:180px;
+    cursor: pointer;
+    margin: 10px;
+    
+    
+}
+
+.registerButton{
+    opacity: 0.9;
+    background-color: lightgrey;
+    text-align: center;
+    text-decoration:none;
+    width: 230px;
+    height:180px;
+    cursor: pointer;
+    display:inline-block;
+    line-height: 170px;
+    margin: 10px;
+}
+body{
+    background-image: url('https://scitechdaily.com/images/3D-Printer.gif');
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+
+}
+.h1{
+    
+    color:white;
+    text-align: center;
+    font-size: 40px;
+}
+.aboutUsButton{
+    opacity: 0.9;
+    background-color: lightgrey;
+    text-align: center;
+    text-decoration:none;
+    width: 230px;
+    height:188px;
+    cursor: pointer;
+    display:inline-block;
+    line-height: 170px;
+    margin: 10px;
+}
+.contactUsButton{
+    opacity: 0.9;
+    background-color: lightgrey;
+    text-align: center;
+    text-decoration:none;
+    width: 230px;
+    height:188px;
+    cursor: pointer;
+    display:inline-block;
+    line-height: 170px;
+    margin: 10px;
+}
+.donateUsButton{
+    opacity: 0.9;
+    background-color: lightgrey;
+    text-align: center;
+    text-decoration:none;
+    width: 230px;
+    height:188px;
+    cursor: pointer;
+    display:inline-block;
+    line-height: 170px;
+    margin: 10px;
+}
