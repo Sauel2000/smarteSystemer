@@ -19,7 +19,7 @@ void setup() {
 
   itemController.setItem(0, 1, new Item(1, "Red lego", 5, 5));
   itemController.setItem(0, 2, new Item(2, "Green lego", 5, 5));
-  itemController.setItem(0, 3, new Item(3, "Lego", 5, 5));
+  itemController.setItem(0, 3, new Item(3, "Yellow Lego", 5, 5));
 
   itemController.setItem(1, 1, new Item(4, "Lego", 5, 5));
   itemController.setItem(1, 2, new Item(5, "Lego", 5, 5));

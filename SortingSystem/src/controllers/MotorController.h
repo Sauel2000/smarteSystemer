@@ -1,7 +1,7 @@
 #pragma once
 #include <Stepper.h> 
 /*
-This library does fit with our systems requirement, but is not implemented that good since
+The library Stepper.h does fit with our systems requirement, but is not implemented that good since
 amount of steps and speed does affect each other in some cases. Therefore start with low values
 before increasing to find sweet spot for your system. Methods to be careful with setspeed(),step().
 */
